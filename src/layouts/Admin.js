@@ -130,7 +130,7 @@ export default function Dashboard(props) {
             </PanelContainer>
           </PanelContent>
         ) : null}
-        <Footer />
+
         <Portal>
           <FixedPlugin
             secondary={getActiveNavbar(routes)}
