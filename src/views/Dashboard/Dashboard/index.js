@@ -38,6 +38,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { PersonIcon } from "components/Icons/Icons";
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
@@ -110,27 +111,66 @@ export default function Dashboard() {
 
         <SalesOverview
           title={"Abertura de marketing"}
-          percentage={5}
+          percentage={16}
           chart={<LineChart />}
         />
       </Grid>
-      <Grid
-        templateColumns={{ sm: "1fr", md: "1fr 1fr", lg: "2fr 1fr" }}
-        templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
-        gap="24px"
+      <SimpleGrid
+        columns={{ sm: 1, md: 2, xl: 4 }}
+        spacing="24px"
+        marginBottom={"32px"}
       >
-        <Projects
-          title={"Projects"}
-          amount={30}
-          captions={["Companies", "Members", "Budget", "Completion"]}
-          data={dashboardTableData}
+        <MiniStatistics
+          title={"Usuários"}
+          amount={"851.650"}
+          percentage={0}
+          icon={<PersonIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
-        <OrdersOverview
-          title={"Orders Overview"}
-          amount={30}
-          data={timelineData}
+        <MiniStatistics
+          title={"Patrocinadores"}
+          amount={"25.769"}
+          percentage={1}
+          icon={<PersonIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
-      </Grid>
+        <MiniStatistics
+          title={"Abertos"}
+          amount={"698"}
+          percentage={-14}
+          icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+        <MiniStatistics
+          title={"Campanha"}
+          amount={"$1200,00"}
+          percentage={8}
+          icon={<CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+      </SimpleGrid>
+      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="24px">
+        <MiniStatistics
+          title={"Disparos"}
+          amount={"866"}
+          percentage={55}
+          icon={<RocketIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+        <MiniStatistics
+          title={"Orçamento"}
+          amount={"$2500,00"}
+          percentage={1}
+          icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+        <MiniStatistics
+          title={"Abertos"}
+          amount={"698"}
+          percentage={-14}
+          icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+        <MiniStatistics
+          title={"Campanha"}
+          amount={"$1200,00"}
+          percentage={8}
+          icon={<CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+        />
+      </SimpleGrid>
     </Flex>
   );
 }
