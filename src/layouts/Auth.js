@@ -104,7 +104,7 @@ export default function Pages(props) {
           </Box>
         </Box>
         <Box px="24px" mx="auto" width="1044px" maxW="100%">
-          <Footer />
+          {/* <Footer /> */}
         </Box>
       </Box>
     </ChakraProvider>
