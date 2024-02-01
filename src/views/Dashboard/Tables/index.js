@@ -7,17 +7,25 @@ import { tablesTableData, dashboardTableData } from "variables/general";
 
 function Tables() {
   return (
-    <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
+    <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
       <Authors
-        title={"Authors Table"}
-        captions={["Author", "Function", "Status", "Employed", ""]}
+        title={"Campanhas"}
+        captions={[
+          "desativar",
+          "orçamento",
+          "Estratégia",
+          "Resultados",
+          "Alcance",
+          "frequência",
+          "Custo por resultado",
+        ]}
         data={tablesTableData}
       />
-      <Projects
+      {/* <Projects
         title={"Projects Table"}
         captions={["Companies", "Budget", "Status", "Completion", ""]}
         data={dashboardTableData}
-      />
+      /> */}
     </Flex>
   );
 }

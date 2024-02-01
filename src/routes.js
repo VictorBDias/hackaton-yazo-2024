@@ -14,7 +14,7 @@ var dashRoutes = [
   },
   {
     path: "/tables",
-    name: "Tables",
+    name: "Marketing",
     icon: <StatsIcon color="inherit" />,
     component: Tables,
     layout: "/admin",
